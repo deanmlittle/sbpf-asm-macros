@@ -1,5 +1,4 @@
-#![feature(asm_experimental_arch)]
-#![feature(asm_const)]
+#![cfg_attr(target_os="solana",feature(asm_experimental_arch, asm_const))]
 #![allow(unused)]
 
 pub mod set_return;

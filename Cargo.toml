@@ -8,3 +8,4 @@ edition = "2021"
 [lib]
 name = "sbpf_asm_macros"
 crate-type = ["cdylib", "lib"]
+license = "MIT"
