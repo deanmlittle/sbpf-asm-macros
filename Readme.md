@@ -61,7 +61,7 @@ This produces the following ASM:
 ldxdw r2, [r1+10520] ; 1CU
 ldxdw r1, [r1+160]   ; 1CU
 jge r1, r2, +2       ; 1CU
-lddw r9, 1337        ; 1CU
+lddw r0, 1           ; 1CU
 exit                 ; 1CU
 ```
 
