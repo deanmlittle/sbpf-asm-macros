@@ -4,8 +4,8 @@ description = "Ergonomic macros for low-level sBPF ASM functionality"
 authors = ["Dean Little <@deanmlittle>"]
 version = "0.1.0"
 edition = "2021"
+license = "MIT"
 
 [lib]
 name = "sbpf_asm_macros"
 crate-type = ["cdylib", "lib"]
-license = "MIT"
