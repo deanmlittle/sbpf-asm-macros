@@ -43,7 +43,7 @@ As SVM initializes its return register 0 with the value of 0, it is possible to 
 
 ```rs
 #![cfg_attr(target_os = "solana", feature(asm_experimental_arch, asm_const))]
-use sbpf_asm::set_return_imm;
+use sbpf_asm_macros::set_return_imm;
 
 #[no_mangle]
 pub unsafe extern "C" fn entrypoint(ptr: *mut u8) {
