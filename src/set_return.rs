@@ -21,7 +21,7 @@ macro_rules! set_return_imm {
     ($value:expr) => {
         let _: u64 = $value; // Compile-time error check for u64
         unsafe {
-            std::arch::asm!(concat!("lddw r0, ", stringify!($value)));
+            core::arch::asm!(concat!("lddw r0, ", stringify!($value)));
         }
     };
 }
@@ -51,7 +51,7 @@ macro_rules! set_return_reg {
     ($value:expr) => {
         let _: u64 = $value; // Compile-time error check for u64
         unsafe {
-            std::arch::asm!(
+            core::arch::asm!(
                 "mov64 r0, {0}",
                 in(reg) $value
             );

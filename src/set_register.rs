@@ -29,7 +29,7 @@ macro_rules! set_register_imm {
         const _: [(); 0 - ((R > 9) as usize)] = []; // Compile-time error to check for R > 9
         
         unsafe {
-            std::arch::asm!(
+            core::arch::asm!(
                 "lddw r{reg}, {val}",
                 reg = const $register,
                 val = const $value,
